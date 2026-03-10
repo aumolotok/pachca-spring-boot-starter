@@ -31,7 +31,7 @@ public class PachcaBotConfig {
     }
 
     @Bean
-    @ConditionalOnMissingBean // Ключевая аннотация: создаем только если пользователь не создал свой
+    @ConditionalOnMissingBean
     public BotEngine botEngine() {
         return new PachcaEngine();
     }

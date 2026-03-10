@@ -3,7 +3,6 @@ package com.pachcaBotComponents.implementations;
 import com.pachcaBotComponents.engine.botSession.BotSession;
 import com.pachcaBotComponents.interfaces.BotEngine;
 import com.pachcaBotComponents.interfaces.PachcaLongPollingBot;
-import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,6 +15,7 @@ public class PachcaEngine implements BotEngine {
 
         var botSession = new BotSession(botToInit);
         botSession.start();
+        botSessions.put(botToInit.getBotName(), botSession);
 
     }
 }

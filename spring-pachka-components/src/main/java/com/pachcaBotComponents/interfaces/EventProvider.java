@@ -8,5 +8,5 @@ public interface EventProvider<T extends EventItem> {
 
     List<T> getEventsToReactOn(List<T> allEvents);
 
-    void passEventToConsumer(List<T> eventToCunsumer);
+    void passEventToConsumer(List<T> eventToConsumer);
 }
