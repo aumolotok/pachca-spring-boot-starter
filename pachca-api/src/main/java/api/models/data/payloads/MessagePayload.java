@@ -1,8 +1,8 @@
-package com.pachcaBotComponents.polling.models.data.payloads;
+package api.models.data.payloads;
 
+import api.models.data.ThreadInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.pachcaBotComponents.polling.models.data.ThreadInfo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -1,6 +1,6 @@
-package com.pachcaBotComponents.api;
+package api;
 
-import com.pachcaBotComponents.polling.models.ApiResponse;
+import api.models.ApiResponse;
 import okhttp3.Request;
 import okhttp3.Response;
 

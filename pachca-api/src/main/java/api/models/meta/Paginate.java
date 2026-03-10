@@ -1,4 +1,4 @@
-package com.pachcaBotComponents.polling.models.meta;
+package api.models.meta;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

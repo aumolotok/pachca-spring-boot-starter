@@ -1,4 +1,4 @@
-package com.pachcaBotComponents.polling.models.data.payloads;
+package api.models.data.payloads;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

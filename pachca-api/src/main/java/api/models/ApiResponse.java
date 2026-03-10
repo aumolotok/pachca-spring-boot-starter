@@ -1,9 +1,9 @@
-package com.pachcaBotComponents.polling.models;
+package api.models;
 
+import api.models.data.EventItem;
+import api.models.meta.Meta;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.pachcaBotComponents.polling.models.data.EventItem;
-import com.pachcaBotComponents.polling.models.meta.Meta;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -1,6 +1,6 @@
 package com.pachcaBotComponents.interfaces;
 
-import com.pachcaBotComponents.polling.models.data.EventItem;
+import api.models.data.EventItem;
 
 import java.util.List;
 import java.util.concurrent.Executor;

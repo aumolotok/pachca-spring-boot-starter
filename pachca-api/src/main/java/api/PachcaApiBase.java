@@ -1,6 +1,5 @@
-package com.pachcaBotComponents.api;
-
-import com.pachcaBotComponents.api.interceptor.AuthInterceptor;
+package api;
+import api.interceptor.AuthInterceptor;
 import okhttp3.OkHttpClient;
 import tools.jackson.databind.ObjectMapper;
 

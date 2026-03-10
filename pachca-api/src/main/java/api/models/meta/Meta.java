@@ -1,4 +1,4 @@
-package com.pachcaBotComponents.polling.models.data;
+package api.models.meta;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,11 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ThreadInfo {
+public class Meta {
     
-    @JsonProperty("message_id")
-    private Integer messageId;
-    
-    @JsonProperty("message_chat_id")
-    private Integer messageChatId;
+    @JsonProperty("paginate")
+    private Paginate paginate;
 }

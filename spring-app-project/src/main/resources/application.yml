@@ -1,0 +1,8 @@
+app:
+  pachca:
+    api:
+      token: ${PACHCA_API_TOKEN}
+    bots:
+      example_bot:
+        name: ${PACHCA_BOT_NAME}
+        token: ${PACHCA_BOT_TOKEN}

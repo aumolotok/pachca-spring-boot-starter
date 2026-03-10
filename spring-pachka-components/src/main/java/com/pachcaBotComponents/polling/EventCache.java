@@ -1,6 +1,6 @@
 package com.pachcaBotComponents.polling;
 
-import com.pachcaBotComponents.polling.models.data.EventItem;
+import api.models.data.EventItem;
 import com.pachcaBotComponents.utils.BoundedMap;
 
 import java.util.Collections;
