@@ -8,11 +8,19 @@
     <artifactId>pachca-bot</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>spring-app-project</module>
         <module>spring-pachka-components</module>
         <module>pachca-api</module>
     </modules>
+
+    <properties>
+        <spring.boot.version>4.0.1</spring.boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <lombok.version>1.18.42</lombok.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -49,13 +57,6 @@
         </dependency>
     </dependencies>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.version>4.0.1</spring.boot.version>
-        <lombok.version>1.18.34</lombok.version>
-    </properties>
     <build>
         <plugins>
             <plugin>
@@ -76,5 +77,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
