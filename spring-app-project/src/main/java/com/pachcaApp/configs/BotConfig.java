@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class BotConfig {
-    private String name;
 
+    private String name;
     @NotBlank(message = "Bot token is required")
     private String token;
 }

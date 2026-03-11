@@ -17,6 +17,7 @@ import java.util.List;
 @ConditionalOnClass(PachcaBotInitializer.class)
 @EnableConfigurationProperties(PachcaProperties.class)
 public class PachcaBotConfig {
+
     @Bean
     @ConditionalOnMissingBean
     public PachcaBotInitializer myService(
@@ -35,6 +36,4 @@ public class PachcaBotConfig {
     public BotEngine botEngine() {
         return new PachcaEngine();
     }
-
-
 }

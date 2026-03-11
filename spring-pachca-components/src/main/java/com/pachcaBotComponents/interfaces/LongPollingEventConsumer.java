@@ -7,6 +7,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public interface LongPollingEventConsumer {
+
     Executor updatesProcessorExecutor = Executors.newSingleThreadExecutor();
 
     default void consume(List<EventItem> eventItems) {

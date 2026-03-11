@@ -4,6 +4,7 @@ import com.pachcaBotComponents.interfaces.PachcaLongPollingBot;
 import com.pachcaBotComponents.polling.PachcaPollingClient;
 
 public class BotSession implements AutoCloseable {
+
     private final PachcaLongPollingBot pachcaLongPollingBot;
     private final PachcaPollingClient pachcaPollingClient;
 
@@ -17,7 +18,7 @@ public class BotSession implements AutoCloseable {
     }
 
     @Override
-    public void close() throws Exception {
+    public void close() {
         pachcaPollingClient.stopPolling();
     }
 }

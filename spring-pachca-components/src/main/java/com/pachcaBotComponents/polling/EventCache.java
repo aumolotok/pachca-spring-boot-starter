@@ -11,9 +11,7 @@ public class EventCache {
     private final BoundedMap<String, EventItem> cache;
 
     public void putEventIfNo(EventItem eventItem) {
-
         var id = eventItem.getId();
-
         cache.putIfAbsent(id, eventItem);
     }
 

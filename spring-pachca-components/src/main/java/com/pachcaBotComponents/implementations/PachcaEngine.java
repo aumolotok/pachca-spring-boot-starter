@@ -12,10 +12,8 @@ public class PachcaEngine implements BotEngine {
 
     @Override
     public void registerBot(PachcaLongPollingBot botToInit) {
-
         var botSession = new BotSession(botToInit);
         botSession.start();
         botSessions.put(botToInit.getBotName(), botSession);
-
     }
 }

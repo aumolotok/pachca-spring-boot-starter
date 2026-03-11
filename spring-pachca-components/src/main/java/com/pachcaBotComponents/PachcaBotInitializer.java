@@ -41,5 +41,5 @@ public class PachcaBotInitializer{
         } catch (Exception e) {
             log.error("Ошибка при регистрации бота ", e);
         }
-    };
+    }
 }
