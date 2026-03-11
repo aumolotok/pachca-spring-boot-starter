@@ -18,8 +18,10 @@ public class EventCache {
     }
 
     public void putAllByOne(List<EventItem> events) {
-        Collections.reverse(events);
-        events.forEach( event -> cache.putIfAbsent(event.getId(), event));
+        if (events != null) {
+            Collections.reverse(events);
+            events.forEach( event -> cache.putIfAbsent(event.getId(), event));
+        }
     }
 
     public boolean hasInCache(String id) {
