@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-pachka-components</artifactId>
+    <artifactId>spring-pachca-components</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 

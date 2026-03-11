@@ -11,7 +11,7 @@
 
     <modules>
         <module>spring-app-project</module>
-        <module>spring-pachka-components</module>
+        <module>spring-pachca-components</module>
         <module>pachca-api</module>
     </modules>
 
