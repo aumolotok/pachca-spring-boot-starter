@@ -16,8 +16,6 @@ public class ShiftQueue<T> {
         if(deque.size() >= size) {
             deque.removeLast();
         }
-
         deque.addFirst(value);
     }
-
 }

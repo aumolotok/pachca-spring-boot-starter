@@ -11,15 +11,15 @@ public class EventCache {
     private final BoundedMap<String, EventItem> cache;
 
     public void putEventIfNo(EventItem eventItem) {
-
         var id = eventItem.getId();
-
         cache.putIfAbsent(id, eventItem);
     }
 
     public void putAllByOne(List<EventItem> events) {
-        Collections.reverse(events);
-        events.forEach( event -> cache.putIfAbsent(event.getId(), event));
+        if (events != null) {
+            Collections.reverse(events);
+            events.forEach( event -> cache.putIfAbsent(event.getId(), event));
+        }
     }
 
     public boolean hasInCache(String id) {
