@@ -1,7 +1,8 @@
 package com.pachcaBotComponents.polling;
 
-import api.PachcaEventApi;
+import api.PachcaBotApi;
 import api.models.data.EventItem;
+import api.models.data.payloads.BasePayload;
 import com.pachcaBotComponents.interfaces.EventProvider;
 import com.pachcaBotComponents.interfaces.LongPollingEventConsumer;
 import com.pachcaBotComponents.interfaces.PachcaLongPollingBot;
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class PachcaPollingClient implements EventProvider<EventItem> {
 
     @Autowired
-    private PachcaEventApi pachcaEventApi;
+    private PachcaBotApi pachcaBotApi;
     private final ScheduledExecutorService scheduledExecutorService;
     private final LongPollingEventConsumer consumer;
 
@@ -28,13 +29,13 @@ public class PachcaPollingClient implements EventProvider<EventItem> {
     private final EventCache cache = new EventCache(cacheAndPullLimit);
 
     public PachcaPollingClient(PachcaLongPollingBot pachcaLongPollingBot) {
-        pachcaEventApi = new PachcaEventApi(pachcaLongPollingBot.getBotToken());
+        pachcaBotApi = new PachcaBotApi(pachcaLongPollingBot.getBotToken());
         this.scheduledExecutorService = Executors.newScheduledThreadPool(1);
         this.consumer = pachcaLongPollingBot.getUpdatesConsumer();
     }
 
     public void startPolling() {
-        var all = pachcaEventApi.getLast50EventsResponse().getData();
+        var all = pachcaBotApi.getLast50EventsResponse().getData();
         cache.putAllByOne(all);
         scheduledExecutorService.scheduleAtFixedRate(this::pollingProcess,3, 3, TimeUnit.SECONDS);
     }
@@ -44,7 +45,7 @@ public class PachcaPollingClient implements EventProvider<EventItem> {
     }
 
     private void pollingProcess() {
-        var allResponse = pachcaEventApi.getLast50EventsResponse();
+        var allResponse = pachcaBotApi.getLast50EventsResponse();
         var eventsToPass = getEventsToReactOn(allResponse.getData());
         passEventToConsumer(eventsToPass);
         log.trace(allResponse.getData().stream().findFirst().get().toString());

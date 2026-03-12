@@ -1,6 +1,7 @@
 package com.pachcaBotComponents.interfaces;
 
 import api.models.data.EventItem;
+import api.models.data.payloads.BasePayload;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -13,5 +14,5 @@ public interface LongPollingEventConsumer {
         eventItems.forEach((update) -> updatesProcessorExecutor.execute(() -> this.consume(update)));
     }
 
-    void consume(EventItem eventItem);
+    void consume(EventItem<? extends BasePayload> eventItem);
 }

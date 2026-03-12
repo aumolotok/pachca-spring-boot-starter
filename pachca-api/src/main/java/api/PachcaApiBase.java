@@ -1,10 +1,12 @@
 package api;
 import api.interceptor.AuthInterceptor;
+import lombok.NoArgsConstructor;
 import okhttp3.OkHttpClient;
 import tools.jackson.databind.ObjectMapper;
 
 import java.util.concurrent.TimeUnit;
 
+@NoArgsConstructor
 public class PachcaApiBase {
     protected OkHttpClient okHttpClient;
     protected ObjectMapper objectMapper;
@@ -19,4 +21,5 @@ public class PachcaApiBase {
                 .build();
         this.objectMapper = new ObjectMapper();
     }
+
 }

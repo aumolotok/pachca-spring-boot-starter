@@ -6,12 +6,12 @@ import okhttp3.Response;
 
 import java.io.IOException;
 
-public class PachcaEventApi extends PachcaApiBase {
+public class PachcaBotApi extends PachcaApiBase {
 
     private final String events = "https://api.pachca.com/api/shared/v1/webhooks/events";
 
-    public PachcaEventApi(String token) {
-        super(token);
+    public PachcaBotApi(String botToken) {
+        super(botToken);
     }
 
     public ApiResponse getLast50EventsResponse() {
